@@ -1,0 +1,23 @@
+.person-card {
+  width: 200px;
+  margin: 1rem 1rem;
+}
+
+.section-card-header {
+  margin: auto;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  text-align: center;
+}
+
+mat-card-header {
+  text-align: center;
+}

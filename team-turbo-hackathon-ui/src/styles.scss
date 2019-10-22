@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+@include mat-core();
+
+$base-gray: #2c3531;
+$base-teal: #116466;
+$base-sand: #d9b08c;
+$base-light-sand: #ffcb9a;
+$base-light: #d1e8e2;
+$text-color: whitesmoke;
+$font: 'Roboto', sans-serif;
+
+$my-app-primary: mat-palette($mat-teal, 800);
+$my-app-accent: mat-palette($mat-red, 100);
+$my-app-warn: mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+/* for sidenav to take a whole page */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: $font;
+  background-color: $base-gray;
+  color: $text-color;
+}

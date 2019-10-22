@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- <img
+    mat-card-image
+    src="http://3.16.47.17/image/{{ .user_id }}"
+    alt="Photo of a Shiba Inu"
+  /> -->
+  <h4>Do You Know This Person?</h4>
+  <form [formGroup]="newForm">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="First Name"
+        formControlName="firstName"
+        firstName="firstName"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Last Name"
+        formControlName="lastName"
+        lastName="lastName"
+      />
+    </mat-form-field>
+  </form>
+  <button
+    type="submit"
+    value="submit"
+    mat-flat-button
+    color="primary"
+    (click)="updateName(newForm.value)"
+  >
+    <mat-icon>done</mat-icon>
+  </button>
+</div>

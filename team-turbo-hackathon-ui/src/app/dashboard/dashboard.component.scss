@@ -1,0 +1,28 @@
+$base-gray: #2c3531;
+$base-teal: #116466;
+$base-sand: #d9808c;
+$base-light-sand: #ffcb9a;
+$base-light: #d1e8e2;
+$text-color: whitesmoke;
+$font: 'Roboto', sans-serif;
+
+.dashboard {
+  height: 100%;
+  width: 100%;
+
+}
+
+.view-row {
+  height: calc(vh - 1rem);
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color
+}

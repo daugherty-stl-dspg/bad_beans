@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="flex-baby">
+    <!-- <h2 class="header">Login</h2> -->
+  </div>
+  <div class="flex-baby">
+    <img class="login-icon" src="../../assets/img/bad-beans-logo.png" alt="">
+  </div>
+  <div class="flex-baby">
+    <form [formGroup]="newForm">
+      <mat-form-field color="accent" class="f-field">
+        <input matInput placeholder="username" formControlName="username">
+      </mat-form-field>
+      <mat-form-field color="accent" class="f-field">
+        <input matInput placeholder="password" formControlName="password">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="flex-baby">
+    <button mat-flat-button color="primary" (click)="login()">
+      Login
+    </button>
+  </div>
+</div>

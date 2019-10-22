@@ -1,0 +1,20 @@
+<div>
+  <h1 class="section-header">Hall of Fame</h1>
+  <div class="container">
+    <div *ngFor="let famedUser of famedUsers; let i = index">
+      <div *ngIf="i < famedUsers.length">
+        <mat-card class="person-card recent-flex-item-0">
+          <mat-card-title
+            >{{ famedUser.firstName }} {{ famedUser.lastName }}</mat-card-title
+          >
+          <mat-card-subtitle>{{ famedUser.los }}</mat-card-subtitle>
+          <img
+            mat-card-image
+            src="https://placekitten.com/420/320?image={{ i + 1 }}"
+            alt="Photo of {{ famedUser.firstName }}"
+          />
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

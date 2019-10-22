@@ -1,0 +1,37 @@
+$base-gray: #2c3531;
+$base-teal: #116466;
+$base-sand: #d9808c;
+$base-light-sand: #ffcb9a;
+$base-light: #d1e8e2;
+$text-color: whitesmoke;
+$font: 'Roboto', sans-serif;
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px 100px;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.flex-baby {
+display: flex;
+justify-content: center;
+}
+
+.header {
+  margin: auto;
+}
+.f-field {
+  width: 100%;
+}
+
+.login-icon {
+  text-align: center;
+  width: 20%;
+  min-width: 150px;;
+  padding: 1rem;
+  max-width: 600px;
+}

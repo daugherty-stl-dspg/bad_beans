@@ -1,0 +1,43 @@
+<mat-toolbar>
+  <div class="nav" fxHide.lt-md>
+    <a mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </a>
+  </div>
+  <div class="logo-group">
+    <a mat-button routerLink="/home" fxShow="true" fxHide.lt-md>
+      <img
+        class="icon"
+        src="../../../../../assets/img/bad-beans-logo.png"
+        alt=""
+      />
+    </a>
+    <a mat-button routerLink="/home" fxShow="true" fxHide.lt-md>
+      <img
+        class="font-icon"
+        src="../../../../../assets/img/bad-beans-font-logo.png"
+        alt=""
+      />
+    </a>
+  </div>
+  <!-- <div>
+    <a mat-button routerLink="/shame" fxShow="true" fxHide.lt-md>Hall of Shame</a>
+  </div>
+  <div>
+    <a mat-button routerLink="/fame" fxShow="true" fxHide.lt-md>Hall of Fame</a>
+  </div> -->
+  <span class="space"> </span>
+  <div>
+    <a mat-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.lt-md>
+      <mat-icon>account_circle</mat-icon>
+    </a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login">
+        Login
+      </button>
+      <button mat-menu-item routerLink="/logout">
+        Logout
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

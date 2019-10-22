@@ -1,0 +1,22 @@
+$base-gray: #2c3531;
+$base-teal: #116466;
+$base-sand: #d9808c;
+$base-light-sand: #ffcb9a;
+$base-light: #d1e8e2;
+$text-color: whitesmoke;
+$font: 'Roboto', sans-serif;
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}

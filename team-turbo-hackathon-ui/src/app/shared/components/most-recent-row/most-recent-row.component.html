@@ -1,0 +1,26 @@
+<div class="container">
+  <div *ngFor="let userWithPhoto of userWithPhotos; let i = index">
+    <div *ngIf="i < 5">
+      <mat-card class="person-card recent-flex-item-0">
+        <mat-card-title *ngIf="!userWithPhoto.firstName">
+          Unknown Shamed
+        </mat-card-title>
+        <mat-card-title
+          >{{ userWithPhoto.firstName }}
+          {{ userWithPhoto.lastName }}</mat-card-title
+        >
+        <mat-card-subtitle>{{ userWithPhoto.los }}</mat-card-subtitle>
+        <img
+          mat-card-image
+          src="http://3.16.47.17/image/{{ userWithPhoto.user_id }}"
+          alt="Photo of {{ userWithPhoto.firstName }}"
+        />
+        <mat-card-content *ngIf="!userWithPhoto.firstName">
+          <button mat-flat-button color="primary" (click)="viewDetails(i)">
+            I Know Them!
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
