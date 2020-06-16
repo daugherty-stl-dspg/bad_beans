@@ -61,7 +61,8 @@ def compareunknowntounknown(knownusers, unknownenc):
         knownenc = user[1]
         distance = euclideandistance(unknownenc, knownenc)
         if distance < minimumdistance:
-            culpritname = user[0]#[user[0].find('KnownFaces\\') + len('KnownFaces\\'):user[0].rfind('.jpg')]
+            #culpritname = user[0]
+            culpritname = user[0][user[0].find('KnownFaces\\') + len('KnownFaces\\'):user[0].rfind('.jpg')]
             minimumdistance = distance
     if minimumdistance < matchthreshold:
         return(culpritname, minimumdistance)
