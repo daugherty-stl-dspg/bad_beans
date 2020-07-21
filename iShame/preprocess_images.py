@@ -13,4 +13,7 @@ def preprocess_image(image):
     # Step 2. Scale down image
     image = cv2.resize(image,(int(image.shape[1]*scale_factor), int(image.shape[0]*scale_factor)))
 
+    # normalize image 
+    image = image/255.
+
     return image

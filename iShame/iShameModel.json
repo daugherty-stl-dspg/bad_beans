@@ -1,0 +1,31 @@
+{
+"conv_layers": [
+    {"num_filters": 16,
+    "filter_size": "(5,5)",
+    "stride_size": "(2,2)",
+    "activation": "relu",
+    "pool_size": "(2,2)"
+    },
+    {"num_filters": 32,
+    "filter_size": "(5,5)",
+    "stride_size": "(2,2)",
+    "activation": "relu",
+    "pool_size": "(2,2)"
+    },
+    {"num_filters": 64,
+    "filter_size": "(5,5)",
+    "stride_size": "(2,2)",
+    "activation": "relu",
+    "pool_size": "(2,2)"
+    }
+],    
+"conn_layers": [
+    {"hidden_units": 20,
+    "activation": "relu",
+    "dropout": 0.5
+    },
+    {"hidden_units": 10,
+        "activation": "relu"
+    }
+]
+}
