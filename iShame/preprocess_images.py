@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 # constants
 convert_to_hsv=False
@@ -17,3 +18,6 @@ def preprocess_image(image):
     image = image/255.
 
     return image
+
+def create_image_data(image_array):
+    return np.stack(image_array, axis=0)
