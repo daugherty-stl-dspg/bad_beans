@@ -7,6 +7,7 @@ from keras.metrics import MeanSquaredError, CategoricalAccuracy
 from keras.initializers import glorot_uniform
 import logging
 
+
 def load_model_def(model_config_filepath):
     with open(model_config_filepath) as f:
         model_def = json.load(f) 
