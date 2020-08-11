@@ -7,15 +7,14 @@ from keras.metrics import MeanSquaredError, CategoricalAccuracy
 from keras.initializers import glorot_uniform
 import logging
 
-def load_model_def(model_filepath):
-    with open(model_filepath) as f:
+def load_model_def(model_config_filepath):
+    with open(model_config_filepath) as f:
         model_def = json.load(f) 
 
     conv_layers = model_def["conv_layers"]   
     conn_layers = model_def["conn_layers"]
 
     return conv_layers, conn_layers
-
 
 def build_model(input_shape, conv_layers, conn_layers, output_classes=None):
 
@@ -70,6 +69,14 @@ def build_model(input_shape, conv_layers, conn_layers, output_classes=None):
                         name='class_output_'+str(output_classes)))
     else:
         model.add(Dense(units=1, name = 'regression_output'))
+
+    return model
+
+def load_model_with_weights(model_config_filepath, model_weights_path, input_shape, output_classes):
+    conv_layers, conn_layers = load_model_def(model_config_filepath)
+
+    model = build_model(input_shape, conv_layers, conn_layers, output_classes)
+    model.load_weights(model_weights_path)
 
     return model
 
